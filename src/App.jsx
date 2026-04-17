@@ -1,4 +1,7 @@
+import { useState } from 'react'
+
 function App() {
+  const [count, setCount] = useState(0)
 
   return (
     <div className="Counter App min-h-screen bg-gray-900 py-24 sm:py-32">
@@ -8,12 +11,12 @@ function App() {
           <div className="mx-auto max-w-2xl lg:text-center">
             <h2 className="text-center text-base/7 font-semibold text-indigo-400">mini project</h2>
             <p className="text-center mt-2 text-4xl font-semibold tracking-tight text-pretty text-white sm:text-5xl lg:text-balance">Counter App</p>
-            <p className="text-center mb-6 justify-center mt-6 text-lg/8 text-gray-300">0</p>
+            <p className="text-center mb-6 justify-center mt-6 text-lg/8 text-gray-300">{count}</p>
           </div>
           {/* Buttons used for incrementing and decrementing a value in a counter.*/}
           <div className="flex items-center justify-center gap-2">
-            <button className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">-</button>
-            <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">+</button>
+            <button type="button" onClick={() => setCount(count - 1)} className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">-</button>
+            <button type="button" onClick={() => setCount(count + 1)} className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">+</button>
           </div>
           <div className="flex items-center justify-center gap-4 mt-10">
             <button type="button" className="inline-flex items-center text-white bg-neutral-primary-soft border border-default hover:bg-neutral-secondary-medium hover:text-heading focus:ring-4 focus:ring-neutral-tertiary-soft shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none">
