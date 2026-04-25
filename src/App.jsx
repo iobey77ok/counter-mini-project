@@ -1,5 +1,7 @@
 import { useState } from 'react'
 /* Hello, World! */
+/* Vite is a build tool that can help creates React project faster*/
+/* React is a JavaScript library for building user interfaces */
 
 function App() {
   const [count, setCount] = useState(0)
